@@ -3,6 +3,9 @@
 # Bearbeitet am 03.06.2021
 # Alle Ansätze und Umsetzungen ohne Gewähr ;)
 
+
+
+
 ##### Preamble -----
 
 ## ENVIRONMENT LEEREN / WORKING DIRECTORY SETZEN
@@ -35,6 +38,9 @@ library(report)
 
 ## DATENSATZ LADEN
 load(url("https://pandar.netlify.app/post/Interaction.rda"))
+
+
+
 
 ##### TEIL 1 - Aufgabe 1 -----
 
@@ -77,6 +83,8 @@ cor.test(int, Interaction$X2)
 
 # Korrelation hochsignifikant
 # r = 0.6295
+
+
 
 
 ##### TEIL 1 - Aufgabe 2 -----
@@ -128,6 +136,9 @@ cor.test(int_scale, Interaction_scale$X2)
 # Korrelation keineswegs signifikant
 # r = -0.0184
 # Deutung: kein lin. Zshg. zw. quad. und lin. Term
+
+
+
 
 ##### TEIL 1 - Aufgabe 3 -----
 
@@ -206,6 +217,8 @@ covid_germany <- subset(covid_sel, Country.Region == "Germany", Confirmed)
 covid_germany[79,]
 
 
+
+
 ##### TEIL 2 - Aufgabe 1a -----
 
 covid_germany$Day <- 1:79
@@ -214,6 +227,9 @@ ggplot(covid_germany, aes(y = Confirmed, x = Day)) +
   geom_point()
 
 # Bei Vergleich die y-Achse beachten, endet hier bei 120000
+
+
+
 
 ##### TEIL 2 - Aufgabe 1b -----
 
@@ -225,6 +241,7 @@ ggplot(covid_germany, aes(y = log_Confirmed, x = Day)) +
 
 # Tipp 1: Hier ist die Form der Funktion entscheidend
 # Tipp 2: Skalierung der y-Achsen ebenfalls zum Ausschluss geeignet
+
 
 
 
@@ -275,6 +292,8 @@ ggplot(covid_germany, aes(x = Day, y = Confirmed)) +
 # Alternative: exponentieller Verlauf
 
 
+
+
 ##### TEIL 2 - Aufgabe 2b -----
 
 ## LOGARITHMISCHES MODELL
@@ -303,6 +322,8 @@ covid_germany_log_pred <- predict(mod_covid_log)
 ggplot(covid_germany, aes(x = Day, y = log_Confirmed)) +
   geom_point(stat = "identity") +
   geom_line(aes(y = covid_germany_log_pred), color = "blue")
+
+
 
 
 ##### TEIL 2 - Aufgabe 3 -----
@@ -353,6 +374,8 @@ boxplot(studres(mod_covid_log_quad))
 
 # Residualvarianz ist klein (aber Aureißer vorhanden) 
 
+
+
 ##### TEIL 2 - Aufgabe 4 -----
 
 ## DATEN FÜR SPANIEN AUFBEREITEN
@@ -386,5 +409,3 @@ summary(mod_covid_log)
 confint(mod_covid_log)
 
 confint(mod_covid_spain_log)
-
-
