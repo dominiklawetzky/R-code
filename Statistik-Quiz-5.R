@@ -2,9 +2,9 @@
 
 # Environment leeren
 
-rm(list = ls())
+#rm(list = ls())
 
-setwd("/Volumes/GoogleDrive/Meine Ablage/+++ Universität/Psych/PsyBSc7_Statistik II/Quiz")
+#setwd("/Volumes/GoogleDrive/Meine Ablage/+++ Universität/Psych/PsyBSc7_Statistik II/Quiz")
 
 # Paket-Namen speichern
 packages <- c("ggplot2", "readxl", "MASS", "dplyr", "multcomp", "tidyr", "lm.beta", "knitr", "car", "psych", "tidyverse", "lmtest", "ggpubr", "ggstatsplot", "jsonlite", "pander", "abind", "RColorBrewer", "interactions", "rococo", "shiny", "ez")
