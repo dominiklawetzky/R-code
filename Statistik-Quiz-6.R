@@ -101,7 +101,7 @@ ezPlot(alc_long, dv = alcuse, wid = id, within = age, x = age) +
               formula = y ~ x + I(x^3), color = 'yellow')
 
 
-##### Aufgabe 5 -----
+##### Aufgabe 5  -----
 
 # Datensatz-Ergänzung
 alc$treat <- c(0,1)
@@ -122,5 +122,4 @@ ezPlot(alc_small_long, dv = alcuse, wid = id, within = age, x = age, between = t
 
 # Durchführung der Mixed-Design-ANOVA
 ezANOVA(alc_small_long, dv = alcuse, wid = id, within = age, between = treat)
-
 
