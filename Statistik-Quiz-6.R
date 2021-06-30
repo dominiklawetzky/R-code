@@ -2,9 +2,9 @@
 
 ## ENVIRONMENT LEEREN / WORKING DIRECTORY SETZEN
 
-rm(list = ls())
+#rm(list = ls())
 
-setwd("/Volumes/GoogleDrive/Meine Ablage/+++ Universität/Psych/PsyBSc7_Statistik II/Quiz")
+#setwd("/Volumes/GoogleDrive/Meine Ablage/+++ Universität/Psych/PsyBSc7_Statistik II/Quiz")
 
 
 
