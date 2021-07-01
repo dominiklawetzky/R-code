@@ -123,3 +123,5 @@ ezPlot(alc_small_long, dv = alcuse, wid = id, within = age, x = age, between = t
 # Durchführung der Mixed-Design-ANOVA
 ezANOVA(alc_small_long, dv = alcuse, wid = id, within = age, between = treat)
 
+
+
